@@ -14,3 +14,4 @@
 - Linguagem quase fortemente tipificada: nem todos os erros são especificados mas sempre deve ocorrer avisos
 - Operadores aritméticos: +, -, * e /
 - Operadores lógicos: e (&&), ou (||) e não (!)
+- Operador de atribuição (:=)
