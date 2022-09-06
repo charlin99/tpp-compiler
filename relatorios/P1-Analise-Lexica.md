@@ -113,14 +113,14 @@ notacao_cientifica = (
 ```
 **Código 5**: Expressões regulares definidas, com excessão das que definem tokens simples (símbolos, operadores lógicos e relacionais).
 
-A partir das expressões regulares, podemos montar autômatos finitos que representam como funcionam as classes dos tokens. Na figura 1 está a representação de um autômato simples que representa os dígitos linguagem. Note que sua expressão regular é [0-9].
+A partir das expressões regulares, podemos montar autômatos finitos que representam como funcionam as classes dos tokens. Na figura 1 está a representação de um autômato simples que representa os dígitos da linguagem. Note que sua expressão regular é [0-9].
 
 ![Autômato de Dígito](https://raw.githubusercontent.com/charlin99/tpp-compiler/main/relatorios/img/digito.png)
 
 **Figura 1**: Representação do autômato de um dígito.
 
 
-O autômato de um identificador pode ser visto abaixo, na figura 2. Esse autômato consiste em sempre começar com uma letra, que pode ser seguida de outras letras, digitos e underlines (_).
+O autômato de um identificador pode ser visto abaixo, na figura 2. Esse autômato consiste em sempre começar com uma letra, que pode ser seguida de outras letras, dígitos e underlines (_).
 
 ![Autômato de Identificador](https://raw.githubusercontent.com/charlin99/tpp-compiler/main/relatorios/img/id.png)
 
