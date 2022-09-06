@@ -87,7 +87,6 @@ reserved_words = {
     "escreva": "ESCREVA",
     "inteiro": "INTEIRO",
 }
-]
 ```
 **Código 4**: Lista contendo as palavras reservadas da linguagem T++.
 
