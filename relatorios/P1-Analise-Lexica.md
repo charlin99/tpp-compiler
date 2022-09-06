@@ -133,7 +133,7 @@ O autômato de um número flutuante pode iniciar com um sinal negativo ou positi
 **Figura 3**: Representação do autômato de um número flutuante.
 
 ## 5. Exemplos de saída do sistema de varredura para exemplos de entrada
-Para a realização do exemplo, será utilizado o arquivo teste.tpp disponibilizado pelo professor da disciplina, que podersá ser visto logo abaixo no código 3.
+Para a realização do exemplo, será utilizado o arquivo teste.tpp disponibilizado pelo professor da disciplina, que podersá ser visto logo abaixo no código 6.
 ```
 inteiro: a[10]
 flutuante: b
@@ -168,7 +168,7 @@ fim
 ```
 **Código 6**: Código fonte do arquivo teste.tpp
 
-A partir do código fonte escrito na linguagem T++, será gerado uma lista sequencial dos tokens que representam cada elemento identificado no código, que poderá ser visto logo abaixo no código 4.
+A partir do código fonte escrito na linguagem T++, será gerado uma lista sequencial dos tokens que representam cada elemento identificado no código, que poderá ser visto logo abaixo no código 7.
 
 ```
 INTEIRO
@@ -288,7 +288,7 @@ ABRE_PARENTESE
 NUM_INTEIRO
 FECHA_PARENTESE
 ```
-**Código 7**: Saída de tokens gerados para o código fonte do código 3.
+**Código 7**: Saída de tokens gerados para o código fonte do código 6.
 
 ## 6. Conclusão
 O PLY é uma ferramenta que auxilia e facilita muito na construção de um compilador, deixando com que apenas tenhamos que definir as palavras a serem utilizadas na linguagem.
