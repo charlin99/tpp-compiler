@@ -32,7 +32,7 @@ Possui suporte a:
 - Operadores aritméticos de adição (+), subtração (-), multiplicação (\*) e divisão (/).
 - Operadores lógicos e (&&), ou (||) e operador de negação (!).
 - Operadores relacionais menor que (<), menor ou igual (<=), maior que (>), maior ou igual (>=) igualdade (=) e diferente (<>).
-- 
+
 ## 3. Detalhes da implementação
 Foram utilizadas para a implementação da varredura a linguagem Python e a ferramenta PLY, que é uma reimplementação do Lex e do Yacc para a linguagem Python.
 
@@ -113,7 +113,25 @@ notacao_cientifica = (
 ```
 **Código 5**: Expressões regulares definidas, com excessão das que definem tokens simples (símbolos, operadores lógicos e relacionais).
 
-A partir das expressões regulares, podemos montar autômatos finitos que representam como funcionam as classes dos tokens.
+A partir das expressões regulares, podemos montar autômatos finitos que representam como funcionam as classes dos tokens. Na figura 1 está a representação de um autômato simples que representa os dígitos linguagem. Note que sua expressão regular é [0-9].
+
+![Autômato de Dígito](https://raw.githubusercontent.com/charlin99/tpp-compiler/main/relatorios/img/digito.png)
+
+**Figura 1**: Representação do autômato de um dígito.
+
+
+O autômato de um identificador pode ser visto abaixo, na figura 2. Esse autômato consiste em sempre começar com uma letra, que pode ser seguida de outras letras, digitos e underlines (_).
+
+![Autômato de Identificador](https://raw.githubusercontent.com/charlin99/tpp-compiler/main/relatorios/img/id.png)
+
+**Figura 2**: Representação do autômato de um identificador.
+
+O autômato de um número flutuante pode iniciar com um sinal negativo ou positivo, e se omitido, inicializará apenas com um dígito subentendendo ser positivo, seguido de um número desejado de mais dígitos, um ponto para a representação da parte decimal, e mais dígitos, como pode ser visto na figura 3.
+
+![Autômato de Número Flutuante](https://raw.githubusercontent.com/charlin99/tpp-compiler/main/relatorios/img/flutuante.png)
+
+**Figura 3**: Representação do autômato de um número flutuante.
+
 ## 5. Exemplos de saída do sistema de varredura para exemplos de entrada
 Para a realização do exemplo, será utilizado o arquivo teste.tpp disponibilizado pelo professor da disciplina, que podersá ser visto logo abaixo no código 3.
 ```
@@ -148,7 +166,7 @@ inteiro principal()
   retorna(0)
 fim
 ```
-**Código 5**: Código fonte do arquivo teste.tpp
+**Código 6**: Código fonte do arquivo teste.tpp
 
 A partir do código fonte escrito na linguagem T++, será gerado uma lista sequencial dos tokens que representam cada elemento identificado no código, que poderá ser visto logo abaixo no código 4.
 
@@ -270,7 +288,7 @@ ABRE_PARENTESE
 NUM_INTEIRO
 FECHA_PARENTESE
 ```
-**Código 6**: Saída de tokens gerados para o código fonte do código 3.
+**Código 7**: Saída de tokens gerados para o código fonte do código 3.
 
 ## 6. Conclusão
 O PLY é uma ferramenta que auxilia e facilita muito na construção de um compilador, deixando com que apenas tenhamos que definir as palavras a serem utilizadas na linguagem.
