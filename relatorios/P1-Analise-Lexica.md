@@ -113,7 +113,7 @@ notacao_cientifica = (
 ```
 **Código 5**: Expressões regulares definidas, com excessão das que definem tokens simples (símbolos, operadores lógicos e relacionais).
 
-A partir das expressões regulares, podemos montar autômatos finitos que representam como funcionam as classes dos tokens
+A partir das expressões regulares, podemos montar autômatos finitos que representam como funcionam as classes dos tokens.
 ## 5. Exemplos de saída do sistema de varredura para exemplos de entrada
 Para a realização do exemplo, será utilizado o arquivo teste.tpp disponibilizado pelo professor da disciplina, que podersá ser visto logo abaixo no código 3.
 ```
