@@ -93,7 +93,7 @@ notacao_cientifica = (
 # Símbolos.
 t_MAIS = r'\+'
 t_MENOS = r'-'
-t_MULTIPLICA = r'\*'
+t_VEZES = r'\*'
 t_DIVIDE = r'/'
 t_ABRE_PARENTESE = r'\('
 t_FECHA_PARENTESE = r'\)'
@@ -157,12 +157,11 @@ def define_column(input, lexpos):
 
 def t_error(token):
 
-    # file = token.lexer.filename
     line = token.lineno
     column = define_column(token.lexer.lexdata, token.lexpos)
     message = "Caracter inválido '%s'" % token.value[0]
 
-    print(f"[Linha {line}, Coluna {column}]: {message}") 
+    print(f"Erro [{line},{column}]: {message}") 
     #print(message)
 
     token.lexer.skip(1)
