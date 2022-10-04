@@ -84,10 +84,10 @@ Como existem inúmeras regras sintáticas, elas serão condensadas em uma tabela
 
 ##### Tabela 1: Representações BNF da linguagem.
 
-## 2. Formato utilizado na análise sintática
+## 3. Formato utilizado na análise sintática
 Foi utilizado o formato LALR(1) na análise sintática da linguagem. LALR significa Look-Ahead LR (LR significa Left-to-Right) e ele é o analisador mais poderoso, que pode lidar com regras gramaticais grandes e em quantidade. Ele possui maior reconhecimento de linguagem que o LR(1), pode gerar ambiguidade pois ele unifica estados semelhantes, porém diminui consideravelmente o número de estados da tabela final.
 
-## 3. Implementação e utilização da ferramenta Yacc
+## 4. Implementação e utilização da ferramenta Yacc
 O Yacc (Yet another compiler-compiler) é uma ferramenta utilizada para a geração de análises sintáticas de compiladores. Ele está implementado no PLY, biblioteca do Python, que foi utilizada também na análise léxica e também foi usada para a implementação dessa parte do trabalho.
 
 O Yacc do PLY utiliza os tokens gerados pela análise léxica, gerando os autômatos com pilha no formato LALR(1), onde é realizada a redução de tokens que já estão empilhados. É definida uma função para cada regra gramatical iniciada pelo prefixo 'p_', exemplo: 'p_lista_declaracoes' irá gerar a função da regra gramatical das listas de declarações.
@@ -116,7 +116,7 @@ def p_list_declaracoes_error(p):
 ```
 #### Código 2: Função para o tratamento de erro da função do código 1.
 
-## 4. Implementação da Árvore Sintática
+## 5. Implementação da Árvore Sintática
 A biblioteca Anytree do Python foi utilizada para a geração dos gráficos das árvores sintáticas, e foi criada uma classe MyNode para a criação dos nós dessa árvore.
 
 Abaixo pode ser visto o código do nó da árvore utilizando o NodeMixin.
@@ -156,7 +156,7 @@ class MyNode(NodeMixin):  # Add Node feature
 ```
 #### Código 3: Classe do nó.
 
-## 5. Saídas geradas
+## 6. Saídas geradas
 
 Os códigos testados foram disponibilizados pelo professor num diretório chamado "sintatica-testes". Abaixo no código 3, está o arquivo expressoes.tpp que está nesse diretório.
 
@@ -199,10 +199,10 @@ Ao abrirmos o último arquivo, expressoes.tpp.unique.ast.png, podemos ver a árv
 ![](https://raw.githubusercontent.com/charlin99/tpp-compiler/main/p2-analise-sintatica/sintatica-testes/expressoes.tpp.unique.ast.png)
 #### Figura 1: Árvore sintática gerada do código.
 
-## 6. Conclusão
+## 7. Conclusão
 O PLY nos gerou uma árvore sintática abstrata que será utilizada na análise semântica e geração de código, assim dando sequência à construção desse compilador. Os testes se mostrataram eficientes, acertando onde deveria e acusando os erros certos caso houvesse algum no código.
 
-## 7. Referências
+## 8. Referências
 **LOUDEN, Kenneth C. Compiladores: princípios e práticas:** Cengage Learning Brasil, 2004. E-book. ISBN 9788522128532. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788522128532/. Acesso em: 03 out. 2022.
 
 **Wikipedia contributors. (2022, September 21). Parsing.** In Wikipedia, The Free Encyclopedia. Retrieved 01:50, October 4, 2022, from https://en.wikipedia.org/w/index.php?title=Parsing&oldid=1111498464
