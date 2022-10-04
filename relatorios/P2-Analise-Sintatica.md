@@ -3,9 +3,9 @@
 
 ¹Bacharelado em Ciência da Computação – Universidade Tecnológica Federal do Paraná (UTFPR)
 
-**Abstract.**
+**Abstract.** In this second part of the assignment, the parsing of the TPP language was realized. Occurring after the lexical analysis, the parsing consists of taking the previously generated tokens and establishing the grammar to be used in the language.
 
-**Resumo.**
+**Resumo.** Nessa segunda parte do trabalho, foi realizada a análise sintática da linguagem TPP. Ocorrendo após a análise léxica, a análise sintática consiste em pegar os tokens previamente gerados e estabelecer a gramática a ser seguida na linguagem.
 
 ## 1. Introdução
 Após a realização da análise léxica, prosseguimos para a análise sintática da linguagem. Essa etapa consiste em verificar a estrutura gramatical do código, para ver se está de acordo com os tokens gerados na análise léxica e respeita a gramática estabelecida.
@@ -118,6 +118,8 @@ def p_list_declaracoes_error(p):
 
 ## 4. Implementação da Árvore Sintática
 A biblioteca Anytree do Python foi utilizada para a geração dos gráficos das árvores sintáticas, e foi criada uma classe MyNode para a criação dos nós dessa árvore.
+
+Abaixo pode ser visto o código do nó da árvore utilizando o NodeMixin.
 ```
 class MyNode(NodeMixin):  # Add Node feature   
 
@@ -152,7 +154,7 @@ class MyNode(NodeMixin):  # Add Node feature
   def edgetypefunc(node, child):
     return '--'
 ```
-#### Código 2: Classe do nó.
+#### Código 3: Classe do nó.
 
 ## 5. Saídas geradas
 
@@ -179,13 +181,26 @@ inteiro principal()
     retorna(0)
 fim
 ```
-#### Código 3: Exemplo de código a ser testado.
+#### Código 4: Exemplo de código a ser testado.
 
-E ao ser passado como parâmetro na execução do parser.py, gerará essa árvore no final:
+E ao ser passado como parâmetro na execução do parser.py, gerará os seguintes arquivos:
+
+expressoes.tpp.ast.dot
+
+expressoes.tpp.ast.png
+
+expressoes.tpp.ast2.png
+
+expressoes.tpp.unique.ast.dot
+
+expressoes.tpp.unique.ast.png
+
+Ao abrirmos o último arquivo, expressoes.tpp.unique.ast.png, podemos ver a árvore gerada, com o código fonte disponível na folha dela:
 ![](https://raw.githubusercontent.com/charlin99/tpp-compiler/main/p2-analise-sintatica/sintatica-testes/expressoes.tpp.unique.ast.png)
 #### Figura 1: Árvore sintática gerada do código.
 
 ## 6. Conclusão
+O PLY nos gerou uma árvore sintática abstrata que será utilizada na análise semântica e geração de código, assim dando sequência à construção desse compilador. Os testes se mostrataram eficientes, acertando onde deveria e acusando os erros certos caso houvesse algum no código.
 
 ## 7. Referências
 **LOUDEN, Kenneth C. Compiladores: princípios e práticas:** Cengage Learning Brasil, 2004. E-book. ISBN 9788522128532. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788522128532/. Acesso em: 03 out. 2022.
